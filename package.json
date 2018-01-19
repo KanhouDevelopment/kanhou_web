@@ -1,0 +1,11 @@
+{
+  "name": "kanhou_development_web",
+  "version": "1.0.0",
+  "description": "Kanhou development next webapp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kanhou development",
+  "license": "ISC"
+}
