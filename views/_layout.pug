@@ -1,0 +1,42 @@
+// // Shared page 
+// Serves partials depending on page being requested
+// serves shared css's and scripts
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		meta(name="description" content="")
+		meta(name="author" content="")
+		link(rel='stylesheet', href='./content/css/shared.css')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+
+		title Kanhou Development
+	body
+		include ./html/shared.html
+
+		div(class="container", style="margin-top:0px; background-color: #ededed")
+			div(class="row")
+				div(class="col-lg-12 text-center")
+
+					if partial == "home"
+						block content
+							include ./html/home.html
+
+					if partial == "about"
+						block content
+							include ./html/about.html
+
+					if partial == "projects"
+						block content
+							include ./html/projects.html
+
+					if partial == "about"
+						block content
+							include ./html/contact.html
+
+		block scripts
+			script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+			script(src="./scripts/dev/shared.js")
+			script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js")
